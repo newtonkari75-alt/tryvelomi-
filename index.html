@@ -39,7 +39,7 @@
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         .hero-section-bg { background-color: #D891B4; }
         .brand-text-color { color: #D891B4; }
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 0; transform: translateY(15px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .glass-panel {
             background: rgba(255, 255, 255, 0.4);
@@ -50,12 +50,14 @@
         .modal-content-area::-webkit-scrollbar { width: 6px; }
         .modal-content-area::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
         
-        /* Otimização para Desktop (Above the fold) */
-        @media (min-height: 700px) and (min-width: 1024px) {
+        /* Otimização Desktop para garantir botões visíveis */
+        @media (min-width: 1024px) {
             .hero-container {
-                min-height: calc(100vh - 80px);
+                min-height: calc(100vh - 70px);
                 display: flex;
                 align-items: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
             }
         }
     </style>
@@ -64,11 +66,11 @@
 
     <!-- Header -->
     <header class="sticky top-0 bg-white z-40 shadow-sm border-b border-gray-100">
-        <div class="container mx-auto flex justify-between items-center px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center px-4 py-2">
             <div class="flex items-center">
-                <img src="images/velomi_logo_black.png" alt="Velomi Logo" class="h-8 w-auto" onerror="this.src='images/velomi_logo.svg'; this.style.filter='brightness(0)';">
+                <img src="images/velomi_logo_black.png" alt="Velomi Logo" class="h-7 w-auto" onerror="this.src='images/velomi_logo.svg'; this.style.filter='brightness(0)';">
             </div>
-            <div class="hidden sm:flex items-center gap-1 text-xs font-bold text-gray-400 uppercase tracking-widest">
+            <div class="hidden sm:flex items-center gap-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
                 GLP-1 UNTERSTÜTZUNG
             </div>
         </div>
@@ -77,74 +79,74 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section-bg text-white overflow-hidden hero-container">
-            <div class="container mx-auto px-4 sm:px-6 py-6 md:py-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 items-center">
+            <div class="container mx-auto px-4 sm:px-6 py-4 md:py-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 items-center">
                     
                     <!-- Text Content (LEFT COLUMN) -->
                     <div class="text-center md:text-left reveal flex flex-col items-center md:items-start z-10">
                         
                         <!-- Badge -->
-                        <div class="glass-panel rounded-full px-4 py-1.5 mb-4 inline-flex items-center shadow-sm">
-                            <span class="font-bold text-xs sm:text-sm text-gray-900">⭐ 4,8/5 Bewertung | Heute 70% Rabatt sichern</span>
+                        <div class="glass-panel rounded-full px-3 py-1 mb-3 inline-flex items-center shadow-sm">
+                            <span class="font-bold text-[10px] sm:text-xs text-gray-900 uppercase">⭐ 4,8/5 Bewertung | 70% Rabatt heute</span>
                         </div>
 
-                        <!-- H1 Title -->
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-3 leading-tight tracking-tight text-white">
+                        <!-- H1 Title - Tamanho de fonte reduzido para compactação -->
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-2 leading-tight tracking-tight text-white">
                             Heißhunger kontrollieren & <br class="hidden sm:block">natürlich Gewicht regulieren
                         </h1>
                         
-                        <!-- Description -->
-                        <p class="text-base md:text-lg mb-5 text-white leading-relaxed max-w-lg font-medium opacity-90">
-                            Velomi GLP-1 Gummies wurden entwickelt, um dein natürliches Sättigungsgefühl zu unterstützen und deinen Stoffwechsel sanft zu begleiten – ohne extreme Diäten.
+                        <!-- Description - Fonte menor -->
+                        <p class="text-sm md:text-base mb-4 text-white leading-relaxed max-w-lg font-medium opacity-90">
+                            Velomi GLP-1 Gummies unterstützen dein Sättigungsgefühl und begleiten deinen Stoffwechsel sanft – ohne Diäten.
                         </p>
                         
-                        <!-- Mobile Image (velomi_2.png) -->
+                        <!-- Mobile Image -->
                         <div class="my-4 flex justify-center items-center md:hidden reveal w-full">
                             <img src="images/velomi_2.png" alt="Velomi GLP-1 Gummies" class="w-full max-w-xs h-auto drop-shadow-2xl">
                         </div>
 
-                        <!-- Benefits Box (Compact) -->
-                        <div class="w-full max-w-md glass-panel rounded-2xl p-4 sm:p-5 mb-6 text-left shadow-sm reveal border border-white/40">
-                            <ul class="space-y-3">
+                        <!-- Benefits Box (Mais compacto) -->
+                        <div class="w-full max-w-md glass-panel rounded-xl p-3 sm:p-4 mb-4 text-left shadow-sm reveal border border-white/40">
+                            <ul class="space-y-2">
                                 <li class="flex items-start">
-                                    <div class="bg-white rounded-full p-1 mr-3 mt-0.5 flex-shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D891B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <div class="bg-white rounded-full p-1 mr-2 mt-0.5 flex-shrink-0 shadow-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#D891B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                     </div>
-                                    <span class="text-gray-900 font-bold text-xs sm:text-sm">Unterstützt eine natürliche Appetitkontrolle</span>
+                                    <span class="text-gray-900 font-bold text-xs">Unterstützt eine natürliche Appetitkontrolle</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="bg-white rounded-full p-1 mr-3 mt-0.5 flex-shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D891B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <div class="bg-white rounded-full p-1 mr-2 mt-0.5 flex-shrink-0 shadow-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#D891B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                     </div>
-                                    <span class="text-gray-900 font-bold text-xs sm:text-sm">Fördert einen gesunden Stoffwechsel</span>
+                                    <span class="text-gray-900 font-bold text-xs">Fördert einen gesunden Stoffwechsel</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="bg-white rounded-full p-1 mr-3 mt-0.5 flex-shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D891B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <div class="bg-white rounded-full p-1 mr-2 mt-0.5 flex-shrink-0 shadow-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#D891B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                     </div>
-                                    <span class="text-gray-900 font-bold text-xs sm:text-sm">90 Tage Geld-zurück-Garantie</span>
+                                    <span class="text-gray-900 font-bold text-xs">90 Tage Geld-zurück-Garantie</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Buttons (Desktop/Mobile Aligned) -->
-                        <div class="flex flex-col gap-3 w-full max-w-md reveal z-10">
-                            <a href="https://www.fasttrack37.com/PM7HK3TH/2RFJCW52/?uid=48801" class="group flex items-center justify-center bg-white text-[#D891B4] text-lg font-extrabold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden text-center">
+                        <!-- Buttons (Mais compactos) -->
+                        <div class="flex flex-col gap-2 w-full max-w-md reveal z-10">
+                            <a href="https://www.fasttrack37.com/PM7HK3TH/2RFJCW52/?uid=48801" class="group flex items-center justify-center bg-white text-[#D891B4] text-base sm:text-lg font-extrabold px-6 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden text-center">
                                 <span class="relative z-10">Jetzt bestellen (70% Rabatt sichern)</span>
                                 <div class="absolute inset-0 bg-gray-50 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -ml-4 w-1/2 h-full"></div>
                             </a>
                             
-                            <a href="https://www.fasttrack37.com/PM7HK3TH/2RFJCW52/" class="flex items-center justify-center bg-transparent hover:bg-white/10 text-white border-2 border-white/30 text-sm font-bold px-8 py-2.5 rounded-full transition-all duration-300 text-center backdrop-blur-sm">
+                            <a href="https://www.fasttrack37.com/PM7HK3TH/2RFJCW52/" class="flex items-center justify-center bg-transparent hover:bg-white/10 text-white border-2 border-white/30 text-xs font-bold px-6 py-2 rounded-full transition-all duration-300 text-center backdrop-blur-sm">
                                 Gewichts-Quiz starten
                             </a>
                         </div>
                     </div>
 
-                    <!-- Desktop Image -->
+                    <!-- Desktop Image (Ajustado para não empurrar o layout) -->
                     <div class="hidden md:flex justify-center items-center h-full reveal relative">
                         <div class="relative z-10">
-                            <div class="absolute -inset-10 bg-white/10 blur-[80px] rounded-full"></div>
-                            <img src="images/velomi_2.png" alt="Velomi GLP-1 Gummy Flasche" class="relative w-full max-w-md xl:max-w-lg h-auto transform transition hover:scale-105 duration-500 drop-shadow-[0_25px_25px_rgba(0,0,0,0.3)]">
+                            <div class="absolute -inset-10 bg-white/10 blur-[60px] rounded-full"></div>
+                            <img src="images/velomi_2.png" alt="Velomi GLP-1 Gummy Flasche" class="relative w-full max-w-xs lg:max-w-sm xl:max-w-md h-auto transform transition hover:scale-105 duration-500 drop-shadow-[0_20px_20px_rgba(0,0,0,0.3)]">
                         </div>
                     </div>
 
@@ -154,34 +156,29 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+    <footer class="bg-gray-900 text-gray-300 py-10 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center text-sm">
-            <div class="flex justify-center items-center gap-2 mb-6">
-                <img src="images/velomi_logo.svg" alt="Velomi Logo Weiß" class="h-6 w-auto opacity-80" onerror="this.style.display='none'">
-                <span class="font-extrabold text-lg text-white">VELOMI</span>
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <img src="images/velomi_logo.svg" alt="Velomi Logo Weiß" class="h-5 w-auto opacity-80" onerror="this.style.display='none'">
+                <span class="font-extrabold text-base text-white">VELOMI</span>
             </div>
 
             <p class="font-medium text-white mb-2">&copy; 2026 Velomi GLP-1 Gummies. Alle Rechte vorbehalten.</p>
-            <div class="inline-flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full mb-8">
+            <div class="inline-flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full mb-6">
                 <div class="w-2 h-2 rounded-full bg-green-400"></div>
                 <span class="text-xs text-gray-400">Autorisierter globaler Händler</span>
             </div>
             
-            <div class="mb-10 text-gray-500 text-xs space-y-1">
+            <div class="mb-8 text-gray-500 text-[10px] space-y-1">
                 <p>Vivello Solutions Ltd | 7 Compton Street, Ashbourne, Derbyshire, GB-DE61BX</p>
                 <p>Support: support@vivellify-support.com | +49 40 7430 2972</p>
             </div>
             
-            <div class="flex justify-center flex-wrap gap-4 md:gap-8 mb-10 text-xs font-bold uppercase tracking-widest">
+            <div class="flex justify-center flex-wrap gap-4 md:gap-8 mb-8 text-[10px] font-bold uppercase tracking-widest">
                 <button onclick="openModal('shipping')" class="hover:text-[#D891B4] transition-colors">Versand & Rückgabe</button>
                 <button onclick="openModal('terms')" class="hover:text-[#D891B4] transition-colors">AGB</button>
                 <button onclick="openModal('privacy')" class="hover:text-[#D891B4] transition-colors">Datenschutz</button>
                 <button onclick="openModal('contact')" class="hover:text-[#D891B4] transition-colors">Kontakt</button>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 mt-4 text-[11px] text-gray-400 max-w-4xl mx-auto space-y-4 leading-relaxed text-left opacity-60">
-                <p>Diese Website ist kein Teil der Google™ Website oder von Google Inc. Zudem wird diese Website in keiner Weise von Google™ unterstützt.</p>
-                <p>*Ergebnisse können variieren. Nahrungsergänzungsmittel sollten nicht als Ersatz für eine ausgewogene Ernährung verwendet werden.</p>
             </div>
         </div>
     </footer>
@@ -191,20 +188,20 @@
         <div class="fixed inset-0 bg-gray-900/95 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-4xl max-h-[90vh] flex flex-col border border-gray-100">
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl max-h-[85vh] flex flex-col border border-gray-100">
                     
-                    <div class="bg-white px-6 py-6 border-b border-gray-50 flex justify-between items-center sticky top-0 z-20">
-                        <h3 class="text-xl font-extrabold text-gray-900" id="modal-title">Informationen</h3>
+                    <div class="bg-white px-6 py-4 border-b border-gray-50 flex justify-between items-center sticky top-0 z-20">
+                        <h3 class="text-lg font-extrabold text-gray-900" id="modal-title">Informationen</h3>
                         <button type="button" onclick="closeModal()" class="rounded-full p-2 bg-gray-100 text-gray-500 hover:text-gray-900 transition-colors">
-                            <i data-feather="x" class="w-5 h-5"></i>
+                            <i data-feather="x" class="w-4 h-4"></i>
                         </button>
                     </div>
 
-                    <div class="bg-white px-8 pb-10 pt-6 overflow-y-auto modal-content-area" id="modal-body">
+                    <div class="bg-white px-8 pb-10 pt-6 overflow-y-auto modal-content-area text-xs sm:text-sm" id="modal-body">
                     </div>
 
                     <div class="bg-gray-50 px-8 py-4 sm:flex sm:flex-row-reverse border-t border-gray-100 sticky bottom-0">
-                        <button type="button" onclick="closeModal()" class="w-full sm:w-auto inline-flex justify-center rounded-xl hero-section-bg px-8 py-3 text-sm font-bold text-white shadow-lg">Schließen</button>
+                        <button type="button" onclick="closeModal()" class="w-full sm:w-auto inline-flex justify-center rounded-xl hero-section-bg px-8 py-2.5 text-xs font-bold text-white shadow-lg">Schließen</button>
                     </div>
                 </div>
             </div>
@@ -217,39 +214,19 @@
         const modalData = {
             'shipping': {
                 title: 'Versand-, Rückgabe- und Erstattungsrichtlinien',
-                body: `
-                    <div class="space-y-6 text-sm text-gray-600">
-                        <section>
-                            <h4 class="font-bold text-gray-900 text-base mb-2">1. Versand & Lieferung</h4>
-                            <p><strong>Bearbeitungszeit:</strong> 1 bis 3 Werktage. <strong>Lieferzeit:</strong> 2 bis 14 Werktage.</p>
-                            <p>Zollgebühren liegen in der Verantwortung des Kunden.</p>
-                        </section>
-                        <section>
-                            <h4 class="font-bold text-gray-900 text-base mb-2">2. 60-Tage-Geld-zurück-Garantie</h4>
-                            <p>Wir sind von der Qualität unserer Produkte überzeugt. Wenn Sie nicht zufrieden sind, kontaktieren Sie uns innerhalb von 60 Tagen für Rücksendeanweisungen.</p>
-                        </section>
-                    </div>
-                `
+                body: `<p><b>Versand:</b> 1-3 Werktage Bearbeitung. 2-14 Werktage Lieferung. <b>60-Tage-Garantie:</b> Gültig für unbenutzte oder bis zu zwei geöffnete Flaschen.</p>`
             },
             'terms': {
                 title: 'Allgemeine Geschäftsbedingungen',
-                body: `<div class="text-sm text-gray-600"><p>Diese Geschäftsbedingungen gelten für alle Verträge der Fa. Vivello Solutions Ltd. Gerichtsstand ist Frankfurt am Main.</p></div>`
+                body: `<p>Diese Bedingungen gelten für Käufe bei Vivello Solutions Ltd. Gerichtsstand ist Frankfurt am Main.</p>`
             },
             'privacy': {
                 title: 'Datenschutzerklärung',
-                body: `<div class="text-sm text-gray-600"><p>Wir erfassen Daten ausschließlich zur Bestellabwicklung. Wir speichern keine Kreditkartendaten direkt.</p></div>`
+                body: `<p>Ihre Daten werden nur zur Bestellabwicklung verwendet. Keine Speicherung von Zahlungsdaten auf unseren Servern.</p>`
             },
             'contact': {
-                title: 'Kontaktieren Sie uns',
-                body: `
-                    <div class="space-y-4 text-sm text-gray-600">
-                        <p>Mo-Fr 9:00 - 18:00 Uhr GMT.</p>
-                        <div class="bg-gray-50 p-6 rounded-2xl space-y-2">
-                            <p><strong>E-Mail:</strong> support@vivellify-support.com</p>
-                            <p><strong>Telefon:</strong> +49 40 7430 2972</p>
-                        </div>
-                    </div>
-                `
+                title: 'Kontakt',
+                body: `<p>E-Mail: support@vivellify-support.com<br>Telefon: +49 40 7430 2972</p>`
             }
         };
 
@@ -272,7 +249,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 30) {
+                if (elementTop < windowHeight - 20) {
                     reveals[i].classList.add("active");
                 }
             }
